@@ -1,0 +1,21 @@
+{{> header }}
+<body>
+    <div>Register</div>
+    <a href="/login">back to login</a>
+    <form action="/auth/register" method="POST">
+        <label for="name">Name</label><br>
+        <input name="name" type="text" id="name"><br>
+        <label for="email">Email</label><br>
+        <input name="email" type="text" id="email"><br>
+        <label for="password">Password</label><br>
+        <input name="password" type="text" id="password"><br>
+        <label for="passwordConfirm">Password Confirm</label><br>
+        <input name="passwordConfirm" id="passwordConfirm" type="text"><br>
+        <button type="submit">register</button>
+    </form>
+
+    {{#if message }}
+        <h4>{{ message }}</h4>
+    {{/if }}
+</body>
+</html>

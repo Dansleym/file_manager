@@ -1,0 +1,15 @@
+{{> header }}
+<body>
+    <div>login</div>
+    <a href="/register">back to register</a>
+    <form action="/auth/login" method="POST">
+        <input name="email" type="text"><br>
+        <input name="password" type="text"><br>
+        <button type="submit">login</button>
+    </form>
+
+    {{#if message }}
+    <h4>{{ message }}</h4>
+    {{/if }}
+</body>
+</html>
